@@ -12,8 +12,7 @@ import {
 } from '@mui/material';
 import {Visibility, VisibilityOff} from '@mui/icons-material';
 
-
-const Index = () => {
+const Login = () => {
     const {
         formData,
         showPassword,
@@ -60,15 +59,12 @@ const Index = () => {
                         <Typography variant="body2" color="text.secondary" sx={{mb: 3}}>
                             Sign in to your account to continue
                         </Typography>
-
                         <Box component="form" onSubmit={handleSubmit} sx={{width: '100%'}}>
-                            {/* Error Alert */}
                             {(errors.email || errors.password) && (
                                 <Alert severity="error" sx={{ mb: 2 }}>
                                     {errors.email || errors.password}
                                 </Alert>
                             )}
-
                             <TextField
                                 margin="normal"
                                 required
@@ -85,7 +81,6 @@ const Index = () => {
                                 helperText={errors.email}
                                 sx={{mb: 2}}
                             />
-
                             <TextField
                                 margin="normal"
                                 required
@@ -136,7 +131,6 @@ const Index = () => {
                                     Don't have an account?{' '}
                                     <Button
                                         variant="text"
-                                        // onClick={onSwitchToRegister}
                                         sx={{
                                             textTransform: 'none',
                                             fontWeight: 'bold',
@@ -155,9 +149,8 @@ const Index = () => {
                     </Paper>
                 </Box>
             </Container>
-
         </Box>
     );
 };
 
-export default Index;
+export default Login;

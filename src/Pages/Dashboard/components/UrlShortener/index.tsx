@@ -10,7 +10,7 @@ import {
     CircularProgress,
 } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useUrlShortener } from '../../../hooks/useUrlShortener';
+import { useUrlShortener } from '../../../../hooks/useUrlShortener';
 
 interface UrlShortenerProps {
     onUrlCreated?: () => void;

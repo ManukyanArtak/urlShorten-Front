@@ -20,7 +20,7 @@ export default function AddUrlModal({ onUrlCreated }: AddUrlModalProps) {
     };
 
     return (
-        <div>
+        <Box>
             <Fab
                 onClick={handleOpen}
                 sx={{
@@ -53,6 +53,6 @@ export default function AddUrlModal({ onUrlCreated }: AddUrlModalProps) {
                     <UrlShortener onUrlCreated={handleUrlCreated}/>
                 </Box>
             </Modal>
-        </div>
+        </Box>
     );
 }

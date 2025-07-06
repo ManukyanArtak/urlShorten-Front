@@ -9,39 +9,9 @@ import Login from './Pages/Auth/Login';
 import Register from './Pages/Auth/Register';
 import Dashboard from './Pages/Dashboard';
 import NotFound from './Pages/NotFound/NotFound';
+import {theme as themeConfig} from './consts/theme';
 
-
-const theme = createTheme({
-    palette: {
-        primary: {
-            main: '#1976d2',
-        },
-        secondary: {
-            main: '#dc004e',
-        },
-    },
-    typography: {
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    },
-    components: {
-        MuiButton: {
-            styleOverrides: {
-                root: {
-                    borderRadius: 8,
-                },
-            },
-        },
-        MuiTextField: {
-            styleOverrides: {
-                root: {
-                    '& .MuiOutlinedInput-root': {
-                        borderRadius: 8,
-                    },
-                },
-            },
-        },
-    },
-});
+const theme = createTheme(themeConfig);
 
 export default function App() {
     return (

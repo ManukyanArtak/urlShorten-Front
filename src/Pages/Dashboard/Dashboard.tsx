@@ -4,13 +4,13 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { 
-    Paper, 
-    Table, 
-    TableBody, 
-    TableCell, 
-    TableContainer, 
-    TableHead, 
+import {
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
     TableRow,
     CircularProgress,
     Alert,
@@ -18,7 +18,7 @@ import {
     Tooltip
 } from "@mui/material";
 import { ContentCopy, OpenInNew } from '@mui/icons-material';
-import AddUrlModal from "./AddUrlModal";
+import AddUrlModal from "./components/AddUrlModal";
 import { useAuth } from '../../components/Context/AuthContext';
 import { useUrls } from '../../hooks/useUrls';
 
@@ -83,11 +83,11 @@ export default function ButtonAppBar() {
                         >
                           <TableCell component="th" scope="row" sx={{ maxWidth: 300 }}>
                             <Tooltip title={url.longUrl}>
-                              <Typography 
-                                variant="body2" 
-                                sx={{ 
-                                  overflow: 'hidden', 
-                                  textOverflow: 'ellipsis', 
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  overflow: 'hidden',
+                                  textOverflow: 'ellipsis',
                                   whiteSpace: 'nowrap',
                                   cursor: 'pointer'
                                 }}
@@ -103,8 +103,8 @@ export default function ButtonAppBar() {
                                 {url.shortUrl}
                               </Typography>
                               <Tooltip title="Copy short URL">
-                                <IconButton 
-                                  size="small" 
+                                <IconButton
+                                  size="small"
                                   onClick={() => handleCopyShortUrl(url.shortUrl)}
                                 >
                                   <ContentCopy fontSize="small" />
@@ -119,8 +119,8 @@ export default function ButtonAppBar() {
                           </TableCell>
                           <TableCell align="center">
                             <Tooltip title="Open original URL">
-                              <IconButton 
-                                size="small" 
+                              <IconButton
+                                size="small"
                                 onClick={() => handleOpenLongUrl(url.longUrl)}
                               >
                                 <OpenInNew fontSize="small" />

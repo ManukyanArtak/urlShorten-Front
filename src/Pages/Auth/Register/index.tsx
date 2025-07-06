@@ -12,7 +12,7 @@ import {
 import {Visibility, VisibilityOff} from '@mui/icons-material';
 import {useRegistration} from './useRegistration';
 
-const Index = () => {
+const Register = () => {
     const {
         formData,
         showPassword,
@@ -35,7 +35,6 @@ const Index = () => {
                 py: 4,
             }}
         >
-
             <Container component="main" maxWidth="sm">
                 <Box
                     sx={{
@@ -62,15 +61,12 @@ const Index = () => {
                         <Typography variant="body2" color="text.secondary" sx={{mb: 3}}>
                             Join us and start creating your short URLs
                         </Typography>
-
                         <Box component="form" onSubmit={handleSubmit} sx={{width: '100%'}}>
-                            {/* Error Alert */}
                             {(errors.name || errors.email || errors.password || errors.confirmPassword) && (
                                 <Alert severity="error" sx={{mb: 2}}>
                                     {errors.name || errors.email || errors.password || errors.confirmPassword}
                                 </Alert>
                             )}
-
                             <TextField
                                 margin="normal"
                                 required
@@ -131,7 +127,6 @@ const Index = () => {
                                 }}
                                 sx={{mb: 2}}
                             />
-
                             <TextField
                                 margin="normal"
                                 required
@@ -182,7 +177,6 @@ const Index = () => {
                                     Already have an account?{' '}
                                     <Button
                                         variant="text"
-                                        // onClick={onSwitchToLogin}
                                         sx={{
                                             textTransform: 'none',
                                             fontWeight: 'bold',
@@ -205,4 +199,4 @@ const Index = () => {
     );
 };
 
-export default Index;
+export default Register;
