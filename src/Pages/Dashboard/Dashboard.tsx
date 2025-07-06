@@ -69,7 +69,7 @@ export default function ButtonAppBar() {
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                    {urls.length === 0 ? (
+                    {urls.length ? (
                       <TableRow>
                         <TableCell colSpan={4} align="center">
                           No URLs found. Create your first short URL!
